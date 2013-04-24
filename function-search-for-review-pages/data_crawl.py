@@ -59,13 +59,13 @@ for i in range(len(products_info)):
 
 
 # store non-review-page-urls to 'cnr.csv'
-with open('/Users/zoe/Desktop/cnr.csv', 'wb') as csvfile:
+with open('cnr.csv', 'wb') as csvfile:
     write_non_review_urls = csv.writer(csvfile, delimiter=',')
     for val in non_review_urls:
         write_non_review_urls.writerow([val])
 
 # store review-page-urls to 'cr.csv'        
-with open('/Users/zoe/Desktop/cr.csv', 'wb') as csvfile:
+with open('cr.csv', 'wb') as csvfile:
     write_review_urls = csv.writer(csvfile, delimiter=',')
     for val in review_urls:
         write_review_urls.writerow([val])
