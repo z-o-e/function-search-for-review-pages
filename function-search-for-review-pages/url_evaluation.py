@@ -3,14 +3,14 @@ import csv
 
 # load non-review-urls
 non_review_urls=[]
-with open('/Users/zoe/Desktop/cnr.csv') as csvfile:
+with open('cnr.csv') as csvfile:
      nr = csv.reader(csvfile, delimiter=',')
      for row in nr:
          non_review_urls.append(row[0])
 
 # load review-urls
 review_urls=[]
-with open('/Users/zoe/Desktop/cr.csv') as csvfile:
+with open('cr.csv') as csvfile:
      r = csv.reader(csvfile, delimiter=',')
      for row in r:
          review_urls.append(row[0])
@@ -52,13 +52,13 @@ r_keyword=review_url_evaluations[1]
 
 
 # write domain indicators and url keyword indicators to csv files 
-with open('/Users/zoe/Desktop/nr_url_eval.csv', 'wb') as csvfile:
+with open('nr_url_eval.csv', 'wb') as csvfile:
     url_pred0 = csv.writer(csvfile, delimiter=',')
     for i in range(len(non_review_urls)):
         url_pred0.writerow([nr_domain[i],nr_keyword[i]])
         i+=1
 
-with open('/Users/zoe/Desktop/r_url_eval.csv', 'wb') as csvfile:
+with open('r_url_eval.csv', 'wb') as csvfile:
     url_pred1 = csv.writer(csvfile, delimiter=',')
     for i in range(len(review_urls)):
         url_pred1.writerow([r_domain[i],r_keyword[i]])
