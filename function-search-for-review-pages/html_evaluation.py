@@ -13,14 +13,14 @@ from xgoogle import BeautifulSoup
 
 # load non-review-page urls
 non_review_urls=[]
-with open('/Users/zoe/Desktop/cnr.csv') as csvfile:
+with open('cnr.csv') as csvfile:
      nr = csv.reader(csvfile, delimiter=',')
      for row in nr:
          non_review_urls.append(row[0])
 
 # load review-page urls
 review_urls=[]
-with open('/Users/zoe/Desktop/cr.csv') as csvfile:
+with open('cr.csv') as csvfile:
      r = csv.reader(csvfile, delimiter=',')
      for row in r:
          review_urls.append(row[0])
@@ -204,13 +204,13 @@ for i in range(len(review_urls)):
     print i
 
 # write predictors to csv files for review-pages and non-review-pages    
-with open('/Users/zoe/Desktop/r_html_eval.csv', 'wb') as csvfile:
+with open('r_html_eval.csv', 'wb') as csvfile:
     html_pred1 = csv.writer(csvfile, delimiter=',')
     for i in range(len(review_urls)):
         html_pred1.writerow([review_first_person[i],review_punctuation[i],review_keywords[i],review_voting_tag[i]])
         i+=1
 
-with open('/Users/zoe/Desktop/nr_html_eval.csv', 'wb') as csvfile:
+with open('nr_html_eval.csv', 'wb') as csvfile:
     html_pred2 = csv.writer(csvfile, delimiter=',')
     for i in range(len(review_urls)):
         html_pred2.writerow([non_review_first_person[i],non_review_punctuation[i],non_review_keywords[i],review_voting_tag[i]])
