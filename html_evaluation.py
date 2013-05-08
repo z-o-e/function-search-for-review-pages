@@ -206,13 +206,13 @@ for i in range(len(review_urls)):
     print i
 
 # write predictors to csv files for review-pages and non-review-pages    
-with open('/Users/zoe/Desktop/r_html_eval.csv', 'wb') as csvfile:
+with open('r_html_eval.csv', 'wb') as csvfile:
     html_pred1 = csv.writer(csvfile, delimiter=',')
     for i in range(len(review_urls)):
         html_pred1.writerow([review_first_person[i],review_punctuation[i],review_keywords[i],review_voting_tag[i]])
         i+=1
 
-with open('/Users/zoe/Desktop/nr_html_eval.csv', 'wb') as csvfile:
+with open('nr_html_eval.csv', 'wb') as csvfile:
     html_pred2 = csv.writer(csvfile, delimiter=',')
     for i in range(len(non_review_urls)):
         html_pred2.writerow([non_review_first_person[i],non_review_punctuation[i],non_review_keywords[i],non_review_voting_tag[i]])
