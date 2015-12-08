@@ -7,9 +7,7 @@ import lxml
 from xgoogle.search import GoogleSearch, SearchError
 from amazonproduct import API
 
-AWS_KEY = 'AKIAIR72V3YXT5I4EQSQ'
-SECRET_KEY = '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'
-api = API(AWS_KEY, SECRET_KEY, 'us', 'aztag-20')
+
 
 # key_words used for crawling non_review pages via Search Library built upon Google
 # products_info used for feeding Amazon API and get review pages 
